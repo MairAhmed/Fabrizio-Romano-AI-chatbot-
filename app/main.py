@@ -25,7 +25,7 @@ st.set_page_config(page_title="Fabrizio Romano AI", page_icon="🚨", layout="wi
 # 2. Sidebar - Info & Controls
 with st.sidebar:
     st.title("Settings")
-    if st.button("🗑️ Clear Database & Scrape New"):
+    if st.button(" Clear Database & Scrape New"):
         if os.path.exists("./chroma_db"):
             import shutil
             shutil.rmtree("./chroma_db")
@@ -69,8 +69,8 @@ if "qa_chain" not in st.session_state:
     )
 
 # 5. Chat Interface
-st.title("🚨 Fabrizio Romano: HERE WE GO!")
-st.caption("Feb 13, 2026 - Real-time Transfer Interaction")
+st.title("Fabrizio Romano: HERE WE GO!")
+st.caption("Real-time Transfer Interaction")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -109,7 +109,7 @@ if prompt := st.chat_input("Ask about a transfer..."):
             fallback_query = f"Respond as Fabrizio Romano. Acknowledge our conversation history if relevant. Question: {prompt}"
             raw_answer = st.session_state.llm.predict(fallback_query)
 
-        # ✨ STREAMING EFFECT: Simulate typewriter
+        #  STREAMING EFFECT: Simulate typewriter
         formatted_answer = format_transfer_update(raw_answer)
         for chunk in formatted_answer.split():
             full_response += chunk + " "
