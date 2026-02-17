@@ -1,4 +1,4 @@
-# 🚨 Product Specification: Fabrizio Romano AI Transfer Guru
+# Fabrizio Romano AI Transfer Guru
 
 ## 1. Vision & Purpose
 **Fabrizio Romano AI** is a real-time football transfer news companion. It bridges the gap between static AI knowledge and the fast-paced nature of the football transfer market by combining a specialized **RAG (Retrieval-Augmented Generation)** architecture with the iconic persona of sports journalist Fabrizio Romano.
